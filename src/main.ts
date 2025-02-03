@@ -23,6 +23,7 @@ app.get("/chocolates",async(req,res)=>{
         const [result,fields]  = await conexao.query("SELECT * FROM chocolates")
         await conexao.end()
     
+<<<<<<< HEAD
         res.send(result)
     }catch(e){
         res.status(500).send("Erro do servidor")
@@ -35,9 +36,10 @@ app.get("/chocolates/:id",async(req,res)=>{
         const result = await banco.listarPorId(req.params.id)
         console.log(result)
         await banco.end()
+=======
+>>>>>>> e443b109366da94e78b76472a534d632f155c3d1
         res.send(result)
     }catch(e){
-        console.log(e)
         res.status(500).send("Erro do servidor")
     }  
 });
@@ -212,6 +214,7 @@ app.post("/pagamento",async(req,res)=>{
     }
 });
 
+<<<<<<< HEAD
 app.delete("/pagamentos/:id",async (req,res)=>{
     console.log("Tentando excluir o pagamento com id:",req.params.id)
     try{
@@ -246,6 +249,8 @@ app.put("/pagamentos/:id",async (req,res)=>{
         res.status(500).send("Erro do servidor")
     }
 })
+=======
+>>>>>>> e443b109366da94e78b76472a534d632f155c3d1
 
 app.get("/estoque",async(req,res)=>{
 
